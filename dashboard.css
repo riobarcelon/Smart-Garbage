@@ -1,0 +1,76 @@
+
+.container {
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding inside the container */
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 1, 10, 0.9); /* Subtle shadow */
+}
+
+div {
+    display: inline-block;
+}
+
+.Dashboard {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding-top: 100px;
+}
+
+h1, h2 {
+    text-align: center;
+    text-decoration: none;
+}
+
+.styled-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #4b6cb7;
+    color: white;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.styled-table tr:hover {
+    background-color: #ddd;
+}
+
+footer {
+    text-align: center;
+    padding-top: 250px;
+    position: relative;
+}
+
+.logout {
+    background-color: #ffffff; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Transition effect */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding: 55px 75px;
+}
+
+.btn {
+    width: 105px;
+    height: 45px;
+}

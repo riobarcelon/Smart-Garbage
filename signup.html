@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sign.css">
+    <title>Sign Up</title>
+</head>
+<style>
+    @media screen and (max-width: 480px) {
+        .Login-Form {
+            padding: 20px;
+            margin: 20px;
+            width: 90%;
+        }
+        
+        .Title {
+            font-size: 1.5em;
+        }
+        
+        input {
+            font-size: 14px;
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+        }
+    }
+</style>
+<body>
+    <div class="Signup-Form">
+        <h1 class="Title">Sign Up</h1>
+        <form id="signupForm" method="POST">
+            <div class="Info">
+                <label for="text">Firstname</label>
+                <input type="text" name="user" placeholder="Firstname" id="user" required>
+                <label for="text">Lastname</label>
+                <input type="text" name="user" placeholder="Lastname" id="user" required>
+            </div>
+            <div class="Pass">
+                <label for="text">Username</label>
+                <input type="text" name="user" placeholder="Username" id="user" required>
+                <label for="password">Password</label>
+                <input type="password" name="pass" placeholder="Password" id="pass" required>
+                <label for="password">Confirm Password</label>
+                <input type="password" name="pass" placeholder="Confirm password" id="pass" required>
+            </div>
+            <div class="Signup">
+                <button type="submit" class="signin-btn">Sign In</button>
+                <p>Already have an account? <a href="index.html" style="color: #4b6cb7;">Click here!</a></p>
+            </div>
+</body>
+</html>

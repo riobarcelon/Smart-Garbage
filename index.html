@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login | Smart Garbage System</title>
+    <style>
+        @media screen and (max-width: 480px) {
+            .Login-Form {
+                padding: 20px;
+                margin: 20px;
+                width: 90%;
+            }
+            
+            .Title {
+                font-size: 1.5em;
+            }
+            
+            input {
+                font-size: 14px;
+            }
+            
+            .login-btn {
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Login-Form">
+        <h1 class="Title">Welcome Admin</h1>
+        <form id="loginForm" method="POST">
+            <div class="User">
+                <label for="text">Username:</label>
+                <input type="text" name="user" placeholder="Admin" id="user" required>
+            </div>
+            <div class="Pass">
+                <label for="password">Password:</label>
+                <input type="password" name="pass" placeholder="Password" id="pass" required>
+            </div>
+            <div class="Login">
+                <button type="submit" class="login-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+                <button type="submit" class="login-btn">Login</button>
+                <p style="color: white;">Signing Up is only for chosen personel!</p>
+            </div>
+                    
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const formData = new FormData(this);
+                
+                fetch('validate.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    if (data === "success") {
+                        alert('Login successful!');
+                        window.location.href = 'dashboard.html';
+                    } else {
+                        alert('Invalid username or password!');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('May problema sa pag-login. Palihug sulayi pag-usab.');
+                });
+            });
+        </script>
+</body>
+</html>
