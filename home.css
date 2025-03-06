@@ -2,6 +2,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .user-img {
@@ -12,7 +15,7 @@ body {
 }
 
 .sidebar {
-    width: 250px;
+    width: 90px;
     background: linear-gradient(75deg, #4D55CC, #211C84);
     color: white;
     padding: 20px;
@@ -22,9 +25,8 @@ body {
     height: 100vh;
 }
 
-.sidebar.minimized {
-    width: 90px;
-    background-color: #B5A8D5;
+.sidebar:hover {
+    width: 250px; /* Minimize sidebar on hover */
 }
 
 .sidebar h2 {
@@ -74,8 +76,3 @@ body {
     background-color: #B5A8D5;
 }
 
-.content {
-    padding: 20px;
-    margin-right: 270px; /* Adjust for sidebar width */
-    flex-grow: 1;
-}

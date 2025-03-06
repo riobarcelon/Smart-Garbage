@@ -3,63 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboard.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="dashboard.css">
     <title>Dashboard | Smart Garbage System</title>
 </head>
 <body>
-    <h1>Smart Garbage System</h1>
-    <div class="Dashboard">
-            <div class="container">
-                <h2>Dashboard</h2>
-              <table class="styled-table">
+    <div class="sidebar" id="sidebar">
+        <button class="toggle-btn" onclick="toggleSidebar()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFdJREFUSEvtkTEOACAIA+n/H42zSiCEFAd0VtveQcgH5P/lB4SE+xGpqoa1nAsAttLXAnpApb31tt9B+4Ksk1DyuYAeUEU2QLKFyPOSlvwkICN+qORZiBbM1hgZKngKjAAAAABJRU5ErkJggg=="/></button><br><br>
+        <div class="user">
+            <a href="personal.html"><img src="HuHu.jpg" alt="me" class="user-img"></a>
+            <div>
+                <p class="bold">Rio R. Barcelon</p>
+                <p>Admin</p>
+            </div>
+        </div>
+
+        <ul>
+            <li><a href="home.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAR1JREFUSEvtlUFKw0AUhr+fXkLsogpKocUTFD2BS4/jUvAy3fQKld6gCmJBXbR4iydTJppOxuSlITuzy2Tyf++f/z1G9PyoZ33cADM7ARbAALiV9OUpzgWI4k/ARRTdANceSCMgii+BS+AzAkbAG3DTBKkFJJVvgVkErIAh0OjkT0BOXNLegZkFBy5IFlAnXgTrhVQAHvE2kANAG3EvJAU8AxNgFwKV9OHpdTM7i5mcAmtJV8V/KcDih3OveMlJgLyHd0k/ullAeYPHQQmyL7AVwMzugAdgnMBegXtJ866AIpecmRdJ066Aiu04bJV1MzvqiP4Bv9nlzjC31iWDuo7xjsRBZ6WDFnr+sXRzeUWLfZXZaLzR2hLS/b0DvgH7ltwZrB+logAAAABJRU5ErkJggg=="/>Home</a></li>
+            <li><a href="dashboard.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAIVJREFUSEvtVdEKgCAQ234s6qG/DqovWxj0EKFNQRHK1xvO7W4nUfmw8v1oSyBpBTBGVG0kp1CTtAMY3nChflMgSSnLSJ54F/cTRN28rOzaotS0LSTnS17RFOWEszmBJb04aK704qBVJ8jYRdZK6ToHH1bg5sDCPZrsjmkOru2fnPMyF3sAqVGIGY+ZVS0AAAAASUVORK5CYII="/>Dashboard</a></li>
+            <li><a href="#about"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAkpJREFUSEu1ltuLTmEUxn+PnIobYpAbKVKKf4CJ5HjB5HxIbpRTLiY1F/4CLkQhJBLKhNyIJkm5GCkXuHBBkhvHEUrJoSx7TevTO3vPN/Nu9b2127X2+65nreddz/N9osVLLc7PkABmNglYBqwA5gMzAANeA0+AHuCOpM/NCh0UwMzmAseBxRkdOuBdYK+kl+X9FQAz2wxcAkYCP4Bu4HpU+tsTmNmo6GwjsAkYA/wE1km6lYIMADAzp8I3jACuAvskfRqqCzNrA84CqwEvoF3Sw8aZfwBmNh54AUwDTkvak0FP/xYz84K8663Ac2CepF/+LQXoAg4XrT8AFkr6kwsQIGOBxwWlc4Dtki6XAZ46MrBI0v1GcjPrBA4ARyQdjWSVWMQ3BLU9klaWAb4BTtM4Sd8TgPfAFOCDpKmRqBKLuH9/V9xdnyS/mwEUfQQmA22S+hKAM4BPVrekXZGoEov4BMA18UXSxDKAz/ISfyTdq8N/UsyqmMJeSQvKALsLKk65aCQtrQsQ2ngUit8v6UQZYDTwqpjp6UCnpGO5IDGmF4FtwFtgVuMey0JrD9m7Ut0qDknyA02XmfXrJhFah6TbFaElPK4HroRVuBZuSupIEczMrWF5IaotwFrAu3/jtlHQ25vubWZ2M6MDvzQkKQzwBjC71I4r9hxwUNLXcqvD2bU7pa+dxQifDFPzhG7Xz4LOa+lY/y9A45wb4A5J7rJZK7cDV7Y764WsrMmmHAB3xzWS/F17DQdwPn6psimpdQe1yx3kQMv/VfwF5nPfGRPvHtwAAAAASUVORK5CYII="/>About Us</a></li>
+            <li><a href="#" onclick="confirmLogout()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANZJREFUSEvVlbEJAkEURN8k9iCCIAZawnVhE9qBiR1oAbZhaCEmZqJgH6MrJ+ihd//AhXPj2Zmd+f/vF5mPMvPTDQHbM2ANTAOOj8BS0j5hQw5sX4FBgPwJOUkatxHwAyw1Psj2G7bxQiKuXqpz0g0B2z1gK2nxcwe2+8AOKCKZV+Oqjch2UZInkVBRwwL3VpynWIAUT/hUXX51kF2gLGa+iJ6ZZC3yi0i+Nv1U3f+b5KbezvEXXYBheDjgLGnU5rtOC2cDTAIiB2DVauEESL9CQvug0wI3mwWOGaBqOMsAAAAASUVORK5CYII="/>Logout</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Smart Garbage System</h1>
+        <div class="card"> <!-- Idinagdag na card div -->
+            <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Recyclable Waste</th>
-                        <th>Organic Waste</th>
-                        <th>Non-Recyclable Waste</th>
-                        <th>Hazardous Waste</th>
+                        <th>Trash</th>
+                        <th>Quantity</th>
+                        <th>Total Quantity</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td id="t1">Plastic</td>
-                        <td id="t2">Vegetables</td>
-                        <td id="t3">Glass</td>
-                        <td id="t4">Batteries</td>
+                        <td>Recyclable Waste</td>
+                        <td><input type="number" value="0" class="form-control" style="width: 80px;" onchange="updateTotal()"></td>
+                        <td id="recyclableTotal">0</td>
                     </tr>
                     <tr>
-                        <td>Rubber</td>
-                        <td>Fruits</td>
-                        <td>Styrofoam</td>
-                        <td>Electronics</td>
+                        <td>Organic Waste</td>
+                        <td><input type="number" value="0" class="form-control" style="width: 80px;" onchange="updateTotal()"></td>
+                        <td id="organicTotal">0</td>
                     </tr>
                     <tr>
-                        <td>Can</td>
-                        <td>Leaf</td>
-                        <td>Contaminated paper</td>
-                        <td>Chemicals</td>
+                        <td>Non-Recyclable Waste</td>
+                        <td><input type="number" value="0" class="form-control" style="width: 80px;" onchange="updateTotal()"></td>
+                        <td id="nonRecyclableTotal">0</td>
+                    </tr>
+                    <tr>
+                        <td>Hazardous Waste</td>
+                        <td><input type="number" value="0" class="form-control" style="width: 80px;" onchange="updateTotal()"></td>
+                        <td id="hazardousTotal">0</td>
                     </tr>
                 </tbody>
             </table>
-            </div>
+        </div> <!-- Pagtatapos ng card div -->
     </div>
-    <div class="logout">
-        <button class="btn btn-danger btn-sm" onclick="confirmLogout(event)">Logout</button>
-    </div>
+
     <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('minimized');
+        }
+
         function confirmLogout() {
             const userConfirmed = confirm("Are you sure you want to logout?");
             if (userConfirmed) {
-                window.location.href = "logout.php";
-            } else {
-                return false;
+                window.location.href = "index.html";
             }
+        }
+
+        function updateTotal() {
+            const recyclable = document.querySelector('input[value="0"]').value;
+            const organic = document.querySelectorAll('input[type="number"]')[1].value;
+            const nonRecyclable = document.querySelectorAll('input[type="number"]')[2].value;
+            const hazardous = document.querySelectorAll('input[type="number"]')[3].value;
+
+            document.getElementById('recyclableTotal').innerText = `${recyclable} `;
+            document.getElementById('organicTotal').innerText = `${organic} `;
+            document.getElementById('nonRecyclableTotal').innerText = `${nonRecyclable} `;
+            document.getElementById('hazardousTotal').innerText = `${hazardous} `;
         }
     </script>
 </body>
-<footer>
-    <p>&copy; since 2025</p>
-    </footer>
+<footer style="text-align: center; margin-top: 20px;">
+    <p>&copy;2025 Kiwii. All Rights Reserved.</p>
+</footer>
 </html>

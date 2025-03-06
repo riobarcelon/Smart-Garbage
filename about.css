@@ -1,0 +1,59 @@
+/* Start Generation Here */
+body {
+    background-color: #f0f4ff; /* Mas maliwanag na background para sa mas magandang hitsura */
+    font-family: 'Arial', sans-serif; /* Gamitin ang Arial font para sa mas malinis na hitsura */
+    transition: background-color 0.3s ease; /* Magdagdag ng transition effect sa background */
+}
+
+.account-section {
+    background-color: #ffffff; /* Puti para sa mas malinis na hitsura */
+    border-radius: 10px; /* Mas bilog na mga sulok */
+    padding: 30px; /* Dagdag na padding para sa mas magandang espasyo */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Mas banayad na anino para sa lalim */
+    margin: 20px auto; /* Center ang account section */
+    width: 90%; /* Mas malawak na seksyon */
+    max-width: 700px; /* Mas malaking maximum na lapad */
+    transition: box-shadow 0.3s ease; /* Magdagdag ng transition effect sa anino */
+}
+
+.account-section:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Palakihin ang anino kapag hover */
+}
+
+h1, h2 {
+    color: #333; /* Madilim na kulay para sa mga pamagat */
+    transition: color 0.3s ease; /* Magdagdag ng transition effect sa kulay */
+}
+
+h1:hover, h2:hover {
+    color: #4D55CC; /* Palitan ang kulay kapag hover */
+}
+
+p {
+    color: #555; /* Mas maliwanag na kulay para sa mga talata */
+    line-height: 1.6; /* Mas magandang spacing sa pagitan ng mga linya */
+    transition: color 0.3s ease; /* Magdagdag ng transition effect sa kulay */
+}
+
+p:hover {
+    color: #333; /* Palitan ang kulay kapag hover */
+}
+
+a {
+    color: #4D55CC; /* Kulay ng link na tumutugma sa tema */
+    text-decoration: none; /* Alisin ang underline */
+    transition: color 0.3s ease; /* Magdagdag ng transition effect sa kulay */
+}
+
+a:hover {
+    text-decoration: underline; /* Magdagdag ng underline kapag hover */
+    color: #333; /* Palitan ang kulay kapag hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .account-section {
+        width: 95%; /* Mas malawak na seksyon sa mas maliit na screen */
+    }
+}
+/* End Generation Here */

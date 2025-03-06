@@ -1,0 +1,106 @@
+body {
+    background-color: #4D55CC; /* Light background for the body */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height for vertical centering */
+}
+.icon-edit, .icon-save{
+    background-color: transparent; /* Alisin ang background */
+    width: 50px; /* Gawing mas malaki ang icon */
+    height: 50px; /* Gawing mas malaki ang icon */
+    border-radius: 50%; /* Gawing bilog ang icon */
+    display: flex; /* Gamitin ang flexbox para sa pag-aayos */
+    justify-content: center; /* I-center ang icon */
+    align-items: center; /* I-center ang icon */
+    transition: transform 0.3s; /* Magdagdag ng transition effect */
+}
+
+.edit-btn, .save-btn {
+    background-color: transparent; /* Gawing transparent ang background */
+}
+
+.icon-edit:hover, .icon-save:hover {
+    transform: scale(1.1); /* Palakihin ang icon kapag hover */
+}
+
+.button-container {
+    text-align: center; /* Center the buttons */
+    margin: 20px 0; /* Margin around the button container */
+}
+
+.profile {
+    width: 100px;
+    height: 100px; /* Added height to maintain round shape */
+    border-radius: 50%; /* Changed to 50% for a perfect circle */
+    border: 1px solid #eee;
+    display: block; /* Make it a block element */
+    margin: 0 auto; /* Center the profile image */
+}
+
+.account-section {
+    background-color: #B5A8D5; /* Background color for the account section */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the section */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    margin: 20px; /* Margin around the section */
+    width: 80%; /* Set a width for the account section */
+    max-width: 600px; /* Max width for larger screens */
+}
+
+h2 {
+    color: #ffffff; /* Header color */
+    margin-bottom: 20px; /* Space below the header */
+    text-align: center; /* Center the header text */
+}
+
+.form-label {
+    color: #333; /* Dark color for labels */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the label text */
+    text-align: center; /* Center the label text */
+    font-size: 1.5em; /* Bigger text size */
+    font-weight: bold; /* Make the text bold */
+}
+
+p {
+    color: #333; /* Dark color for labels */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the label text */
+    text-align: center; /* Center the label text */
+    font-size: 1.2em; /* Bigger text size */
+}
+
+p:not(.prof) {
+    cursor: text; /* Change cursor to text when hovering over editable paragraphs */
+}
+
+.prof {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #4D55CC; /* Primary button color */
+    border: none; /* No border */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    display: block; /* Make button a block element */
+    margin: 0 auto; /* Center the button */
+}
+
+.btn-primary:hover {
+    background-color: #7A73D1; /* Change color on hover */
+}
+    
+input.form-control {
+    border-radius: 5px; /* Rounded corners for input fields */
+    border: 1px solid #ccc; /* Light border */
+    display: block; /* Make input a block element */
+    margin: 0 auto; /* Center the input fields */
+    width: 80%; /* Set a width for input fields */
+}
+
+input.form-control:focus {
+    border-color: #4D55CC; /* Border color on focus */
+    box-shadow: 0 0 5px rgba(77, 85, 204, 0.5); /* Shadow on focus */
+}
