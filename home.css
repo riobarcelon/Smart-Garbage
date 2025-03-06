@@ -1,26 +1,37 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     display: flex;
 }
 
+.user-img {
+    width: 50px;
+    height: 50px; /* Added height to maintain round shape */
+    border-radius: 50%; /* Changed to 50% for a perfect circle */
+    border: 1px solid #eee;
+}
+
 .sidebar {
-    width: 200px;
-    background-color: #333;
+    width: 250px;
+    background: linear-gradient(75deg, #4D55CC, #211C84);
     color: white;
-    padding: 15px;
+    padding: 20px;
     position: fixed;
     right: 0;
-    transition: width 0.3s;
+    transition: width 0.3s, background-color 0.3s;
+    height: 100vh;
 }
 
 .sidebar.minimized {
-    width: 50px;
+    width: 90px;
+    background-color: #B5A8D5;
 }
 
 .sidebar h2 {
-    color: #fff;
+    color: #ecf0f1;
     display: block;
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
 .sidebar ul {
@@ -29,31 +40,42 @@ body {
 }
 
 .sidebar ul li {
-    margin: 10px 0;
+    margin: 20px 0; /* Increased margin for more space */
 }
 
 .sidebar ul li a {
-    color: white;
+    color: white; /* Changed icon color to white */
     text-decoration: none;
-    padding: 10px;
-    display: block;
+    padding: 12px;
+    display: flex; /* Change to flex for icon alignment */
+    align-items: center; /* Center icon vertically */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    gap: 45px; /* Increased spacing between icon and text */
 }
 
 .sidebar ul li a:hover {
-    background-color: #575757;
+    background-color: #7A73D1;
 }
 
 .toggle-btn {
-    background-color: #444;
+    background-color: #7A73D1;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-left: 4px; /* Added gap to toggle btn to user */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: #B5A8D5;
 }
 
 .content {
     padding: 20px;
-    margin-right: 220px; /* Adjust for sidebar width */
+    margin-right: 270px; /* Adjust for sidebar width */
     flex-grow: 1;
 }
