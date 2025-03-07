@@ -1,8 +1,5 @@
 body {
     background-color: #4D55CC; /* Light background for the body */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
     height: 100vh; /* Full height for vertical centering */
 }
 .icon-edit, .icon-save{
@@ -25,8 +22,15 @@ body {
 }
 
 .button-container {
-    text-align: center; /* Center the buttons */
+    display: flex; /* Gamitin ang flexbox para sa pag-aayos ng mga button */
+    justify-content: center; /* I-center ang mga button */
     margin: 20px 0; /* Margin around the button container */
+    gap: 10px; /* Space between buttons */
+    text-decoration: none;
+    border-radius: 50%; /* Idinagdag ang border radius na 100% */
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #eee;
 }
 
 .profile {

@@ -45,10 +45,12 @@
             </div>
             <div class="Login">
                 <button type="submit" class="login-btn" onclick="window.location.href='signup.html'">Sign Up</button>
-                <button type="submit" class="login-btn">Login</button>
-                <p style="color: white;">Signing Up is only for chosen personel!</p>
+                <button type="submit" class="login-btn">Sign In</button>
             </div>
-                    
+            <div class="card" style="background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 5px; padding: 15px; margin-top: 10px;">
+                <p style="color: #721c24; text-align: center; font-size: 13px;"><strong>Gentle Reminder:</strong> Signing Up is only for chosen personel! Ask the admin first if you wish to Login</p>
+            </div>
+        </form>                
         <script>
             document.getElementById('loginForm').addEventListener('submit', function(event) {
                 event.preventDefault();
@@ -74,8 +76,6 @@
                 });
             });
         </script>
+    </div>
 </body>
-<footer style="text-align: center; margin-top: 20px;">
-    <p>&copy;2025 Kiwii. All Rights Reserved.</p>
-</footer>
 </html>

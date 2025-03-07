@@ -5,17 +5,25 @@
     <meta name="viewport" content="width= , initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="personal.css">
     <title>Personal Information | Info</title>
 </head>
 <body> 
+    <div class="go-back">
+        <div style="position: absolute; top: 20px; left: 20px;">
+            <a href="home.html" class="btn btn-primary">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANdJREFUSEvllD0KAjEQRt93CEF7Bc8ggp5CsBa8jlgLHkbBG1jY2AveIRKIW2R/J5stxK22SN6b+ZiJGPjTwHz+ROCcGwNbSQdrpK0RBfgVmAJ7SSeLpFEQwZ/AQtIriyCCP4CVFe4LqeygAr6U9LZU/j1bEjjnRsAtZO4rT4aXOgjwCzAH7sA6tfJSBxE8JY3ijqQimeJncIHXR5Le+VdOUW5J3Zhmm6TaTc61C5anImmbuz52fjdmwE7S2TLDrYIwXRNgI+logde+RVZI0/lOHfQR/r7gA/CHVhkj+dYjAAAAAElFTkSuQmCC"/>Go Back
+            </a>
+        </div>
+    </div>
 <div class="account-section">
     <h2>User Information</h2>
     <a href=""><img src="pfp.webp" alt="profile" class="profile"></a>
     <p class="prof">Profile</p>
     <div class="button-container">
-        <button id="edit-btn"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAYRJREFUSEu1lLlKBEEQhr8/MTATRAMFwUBRWY9Y8Up9J1F8H5/A+3oDA+8DRRQDNfCIyqmlVladcaeXtZMeaprvr/qrusU/L/0zn6YFzKwNWADagVVJb3nJNiVgZh3ABjAe0AtgVtL1T5FkgYBvAmPAHfACDMb3hKT7epEkATPrBNYzS0aBU2AeeAfWIrYsaakpATPrymzYAoYCcOa2AB8hWgFWJC0mC5hZN+C2OPwBeAIGgBvgNb49XpHk+9dqaFHAD4B+4DZr7jTwnNmzAwwHqRqXdJ7U5Bz4pKSrH1Pk8Go8aUzNrCeyrGVeD98FRgCHzhTBXTDXooDvA31hSxHc415B4folYGYO3W4FPLcCM7sMuO9+O91zn3+/uT6KJ1kCc40yr5WUV4HFz16HBNzn3z0/jmn5dltTLaoKSFLA9+IpOIqGloYXWVSroD4xh09Jekx93v+yqMY6jF4kwwvHNDXLpB60Ep7Sg9K6Phx/PnZmltfk1gmUJpU82PC5LskpPPYJjJWbGUkD/JsAAAAASUVORK5CYII=" class="icon-edit"/>Edit</button>
-        <button id="save-btn" style="display: none;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAP5JREFUSEvtlb0NwjAQhb83BDQUSAiJPzECI9AxDhVCYhmmoKCiBCQkCkq2OJQoiZzgJDgIGnCV2D5/vud7tvhw04fX57sAM1sAK2AUkNkBmEu6+2JyGZjZCRgHLJ5OvQIzH6QIsChCUtxvZvF/2jz9bWAHDAEv5C1ABDSzFrAH+j5IEKAonZNRJ8mkBxwlTbOs3aBUkjKJygCJnF3g5kocf1cBQg+7uMEfACTGWwODErkuwFLS1i3r9AxrJXrReGdJk6aAnPGKWZRVXUgGf0C10XzGecX5VWfQ9Lp2uVlV+co0enA2yc0YelNE83O+eAI0WbEu5rtvct1umow/AO6K1Bl+oedQAAAAAElFTkSuQmCC" class="icon-save"/>Save</button>
+        <button id="edit-btn"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZxJREFUSEvllb9Lw1AQx++SojjpVATBQQQdTHnvsjk4u/kf+Bc4tminVhB/tZv+C666ugtu7xIIQgcRBKE4CDpYREqeTWklialNWjuZLcm77+fue/feQ5jwgxPWhz8DEFENff9ZuW49nHQEIITYMg3jGABWB1WmtfZB62123Yv+GpLyDBF3uu++XwpDIgCS8gkRF7KIFwqFfM40PUTMf8dpXVaOEyQatcgm0sFHxZzKOiHEnOu6r0S0jAA3ADAfxGuAXWY+HQtgC1EExOJnu73ued6DZVlLU7ncrUY8YObzfjWRTNNWYEu5B4hHPZGmBthg5nvbtmeVUm8Dm5wGYAtRBsM4jPWp+d5qWY1G4yXev0wVdG0xjFpcRAPUmbmUNBypAWnFiWiTma8z9YCIqghQGZZ5II4AV4p5JjWAiCqdMqvDxIP/JOUHIk6Hx3yoRf3GhwGDPE8aksyAzk6sMvN+UkPHB8TOmThkJECW4/x/AB4BYDGLLT/Wan2nHGctcR/0LpwTAFgZEeL1puwyETCi6K9hqS6WccATB3wBAN3sGWT0/NQAAAAASUVORK5CYII="class="icon-edit"/>Edit</button>
+        <button id="save-btn"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARRJREFUSEvtlT1uwkAQheeZXCE0FEgIKQkIWWNqjkDHcVJFkbgMp0iRCu82YAmJgpIj4IZBG7GSf/FCbBrYyrvaeZ/e/HhBDS80rE/3BTDzDERfAD5cnYnI8hDH0yiK9kUxKQcB8xrAwFXc3hOR7SGOJ0WQFGAcBGKCQqX+zu3eCmXPjyJtD/ghovcyyL8ABsjMryD6BdAvglwFyKbOOvJ9v/PSahknPSJahUqN7N1aAEaMmbsesEum2HxfBFxb7GwNHwBgBs8DvonorSRdm6PIp9Z6kWxrW/zKFLkMnohESuvhTYCioiWdlA2ms4MnoLLItafIpWuqpjvZVTkH5wdnbv6MVUIuc5ED3Ch6Mey+b3ITDk6kufsZ/5+PgQAAAABJRU5ErkJggg==" class="icon-save"/>Save</button>
     </div>
     <div class="mb-3">
         <label class="form-label">Username:</label>
@@ -58,11 +66,11 @@
         alert('Saved information Successfully!'); // Notification message
         
         // I-redirect sa home.html
-        window.location.href = "home.html"; // I-redirect sa home page
+        window.location.href = "personal.html"; // I-redirect sa home page
     });
 </script>
 </body>
-<footer style="text-align: center; margin-top: 20px;">
+<!-- <footer style="text-align: center; margin-top: 20px;">
     <p>&copy;2025 Kiwii. All Rights Reserved.</p>
-</footer>
+</footer> -->
 </html>
